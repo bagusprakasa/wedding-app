@@ -17,8 +17,14 @@ Route::get('/', function () {
     return view('wedding');
 });
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth'])->name('dashboard');
+Route::middleware(['auth'])->group(
+    function () {
+        Route::get('/dashboard', function () {
+            $param['pageIcon'] = 'fa fa-home';
+            $param['pageTitle'] = 'Aplikasi Member';
+            return view('dashboard', $param);
+        })->middleware(['auth'])->name('dashboard');
+    }
+);
 
 require __DIR__ . '/auth.php';
