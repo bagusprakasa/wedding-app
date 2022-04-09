@@ -44,7 +44,8 @@
     <section id="opening">
         <div class="container text-center" data-aos="fade-in" data-aos-duration="1500">
             <div class="text-dec text-dec-white mb-4">Wedding Invitation</div>
-            <h2 class="font-type-secondary mb-2">Sektiawan Widiatmoko A.Md. Farm. & Nuril Afifah S.Kom.</h2>
+            <h2 class="font-type-secondary mb-2" style="font-size:55px">Sektiawan Widiatmoko A.Md. Farm. & Nuril Afifah
+                S.Kom.</h2>
             <img src="{{ asset('') }}img/decoration/foliage-horizontal-1.svg" alt="" class="w-75 w-md-30rem my-3">
 
             <div class="fw-bold mt-8">Halo, <span id="guest"></span></div>
@@ -241,7 +242,7 @@
                 <div class="col-md-auto order-2 order-lg-1 d-flex flex-column align-items-center d-md-block text-center text-md-start mb-10 mb-lg-0"
                     data-aos="fade-right" data-aos-duration="1400">
                     <div class="img-wrapper img-wrapper-left mb-8">
-                        <img src="{{ asset('') }}img/spouse/man.png" alt="">
+                        <img src="{{ asset('') }}img/lelaki.jpg" alt="" style="width:277px;height:277px">
                     </div>
                     <h3 class="font-type-secondary text-dark">Sektiawan Widiatmoko A.Md. Farm.</h3>
                     <!-- <div class="text-md text-dark font-normal mb-3">@mr</div> -->
@@ -256,8 +257,8 @@
                 </div>
                 <div class="col-md-auto order-3 d-flex flex-column align-items-center d-md-block text-center text-md-start"
                     data-aos="fade-left" data-aos-duration="1400">
-                    <div class="img-wrapper img-wrapper-right mb-8">
-                        <img src="{{ asset('') }}img/spouse/woman.png" alt="">
+                    <div class="img-wrapper img-wrapper-right mb-8" style="background-color:#ffffff">
+                        <img src="{{ asset('') }}img/wanita.png" alt="" style="width:185px;height:314px">
                     </div>
                     <h3 class="font-type-secondary text-dark">Nuril Afifah S.Kom.</h3>
                     <!-- <div class="text-md text-dark font-normal mb-3">@ms <a href="https://fontawesome.com/v4.7/get-started/" target="_blank"><i class="fab fa-instagram" style="color: black;"></i></a></div> -->
@@ -312,13 +313,59 @@
     <section id="section-5">
         <div class="container text-dark text-center">
             <h2 class="font-type-secondary">Look at Our Happiness</h2>
-            <div class="text-lg text-spacing-default my-2">Galeri</div>
+            <div class="text-lg text-spacing-default my-2">Lokasi</div>
 
             <div id="row-lightgallery" class="row gy-4 mt-10 overflow-hidden">
                 <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3953.5546223978286!2d113.71217605951345!3d-7.7308386288040145!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x6fde6bb67c982858!2zN8KwNDQnMDkuNSJTIDExM8KwNDInMzguOSJF!5e0!3m2!1sid!2sid!4v1648990449929!5m2!1sid!2sid"
                     width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
                     referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <section id="section-5">
+        <div class="container text-dark text-center">
+            <h2 class="font-type-secondary">Kirim Doa dan Ucapan</h2>
+            <div class="text-lg text-spacing-default my-2">Tuliskan sesuatu ucapan berupa harapan ataupun doa untuk
+                kedua mempelai.</div>
+
+            <div id="row-lightgallery" class="row gy-4 mt-10 overflow-hidden">
+                <form action="">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label for="">Nama Lengkap</label>
+                            <input type="text" class="form-control" placeholder="Tulis Nama Lengkap Anda"
+                                name="name">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="">Email</label>
+                            <input type="email" class="form-control" placeholder="Tulis Email Anda (Optional)"
+                                name="email">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="">No Handphone</label>
+                            <input type="number" class="form-control"
+                                placeholder="Tulis No Handphone Anda (Optional)" name="phone">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="">Alamat</label>
+                            <input type="text" class="form-control" placeholder="Tulis Alamat Anda (Optional)"
+                                name="addres">
+                        </div>
+                        <div class="col-md-12">
+                            <label for="">Ucapan dan Doa</label>
+                            <textarea class="form-control" placeholder="Tulis Ucapan dan Doa Anda Untuk Kedua Mempelai (Optional)"
+                                name="saying"></textarea>
+                        </div>
+                        <div class="col-md-12">
+                            <label for="">Apakah anda akan hadir memenuhi undangan saya?</label>
+                            <select name="present" class="form-control select2">
+                                <option value="1">Hadir</option>
+                                <option value="0">Tidak Hadir</option>
+                            </select>
+                        </div>
+                </form>
             </div>
         </div>
     </section>
