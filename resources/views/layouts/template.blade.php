@@ -12,9 +12,7 @@
         integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="{{ asset('') }}css/select2.min.css" />
-    <link rel="stylesheet"
-        href="{{ asset('') }}vendor/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css" />
-    <link rel="stylesheet" href="{{ asset('') }}vendor/sweetalert-master/dist/sweetalert.css" />
+    <link rel="stylesheet" href="{{ asset('') }}css/sweetalert.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.4.0/fullcalendar.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
@@ -82,37 +80,12 @@
                                     <span class="fa fa-arrow-left mr-3 btn-rgb-primary fa-sm p-2 "></span>
                                 @endif </span>
                             </a>
-                            @if (ucwords(str_replace('-', ' ', Request::segment(1))) == 'Dashboard')
-                                {{ ucwords(str_replace('-', ' ', Request::segment(1))) }}
-                            @elseif (ucwords(str_replace('-', ' ', Request::segment(1))) == 'Customer')
-                                Member
-                            @elseif (Request::segment(1) == 'cek-poin')
-                                Cek Poin
-                            @elseif (Request::segment(1) == 'transaction')
-                                Transaksi
-                            @elseif (Request::segment(1) == 'branch')
-                                Cabang
-                            @elseif (Request::segment(1) == 'cashier')
-                                Kasir
-                            @endif
+                            {{ ucwords(str_replace('-', ' ', Request::segment(1))) }}
+                        </h5>
                         </h5>
                     </div>
                     <div class="col-md-6 text-right">
-                        <h6>
-                            @if (ucwords(str_replace('-', ' ', Request::segment(1))) == 'Dashboard')
-                                {{ ucwords(str_replace('-', ' ', Request::segment(1))) }}/ {{ $pageTitle }}
-                            @elseif (ucwords(str_replace('-', ' ', Request::segment(1))) == 'Customer')
-                                Member / {{ $pageTitle }}
-                            @elseif (Request::segment(1) == 'cek-poin')
-                                Cek Poin / {{ $pageTitle }}
-                            @elseif (Request::segment(1) == 'transaction')
-                                Transaksi / {{ $pageTitle }}
-                            @elseif (Request::segment(1) == 'branch')
-                                Cabang / {{ $pageTitle }}
-                            @elseif (Request::segment(1) == 'cashier')
-                                Kasir / {{ $pageTitle }}
-                            @endif
-                        </h6>
+                        <h6>{{ ucwords(str_replace('-', ' ', Request::segment(1))) }} / {{ $pageTitle }}</h6>
                     </div>
                 </div>
                 <hr class="mt-4">
@@ -123,8 +96,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
         integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous">
     </script>
-    <script src="{{ asset('') }}vendor/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
-    <script src="{{ asset('') }}vendor/sweetalert-master/dist/sweetalert.min.js"></script>
+    <script src="{{ asset('') }}js/sweetalert.min.js"></script>
     <script src="{{ asset('') }}js/select2.full.min.js"></script>
 
     <script>
@@ -133,15 +105,11 @@
             $('[data-toggle="tooltip"]').tooltip()
         })
         $(".select2").select2()
-        $(".datepicker").datepicker({
-            format: 'yyyy-mm-dd',
-            todayHighlight: true,
-        });
         $(".logout").click(function(e) {
             e.preventDefault()
             swal({
                     title: "Apakah anda yakin?",
-                    text: 'Anda akan keluar dari aplikasi Member',
+                    text: 'Anda akan keluar dari aplikasi Wedding Invitation',
                     type: "warning",
                     showCancelButton: true,
                     confirmButtonColor: "#dc3545",

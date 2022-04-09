@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\VisitorController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,15 +16,16 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('wedding');
-});
+})->name('landing-page');
 
 Route::middleware(['auth'])->group(
     function () {
         Route::get('/dashboard', function () {
             $param['pageIcon'] = 'fa fa-home';
-            $param['pageTitle'] = 'Aplikasi Member';
+            $param['pageTitle'] = 'Aplikasi Wedding Invitation';
             return view('dashboard', $param);
         })->middleware(['auth'])->name('dashboard');
+        Route::resource('visitor', VisitorController::class);
     }
 );
 

@@ -331,12 +331,13 @@
                 kedua mempelai.</div>
 
             <div id="row-lightgallery" class="row gy-4 mt-10 overflow-hidden">
-                <form action="">
+                <form action="{{ route('visitor.store') }}" method="POST">
+                    @csrf
                     <div class="row">
                         <div class="col-md-6">
                             <label for="">Nama Lengkap</label>
-                            <input type="text" class="form-control" placeholder="Tulis Nama Lengkap Anda"
-                                name="name">
+                            <input type="text" class="form-control" placeholder="Tulis Nama Lengkap Anda" name="name"
+                                required="required">
                         </div>
                         <div class="col-md-6">
                             <label for="">Email</label>
@@ -360,11 +361,14 @@
                         </div>
                         <div class="col-md-12">
                             <label for="">Apakah anda akan hadir memenuhi undangan saya?</label>
-                            <select name="present" class="form-control select2">
+                            <select name="present" class="form-control select2" required>
                                 <option value="1">Hadir</option>
                                 <option value="0">Tidak Hadir</option>
                             </select>
                         </div>
+                        <button type="submit" class="btn btn-primary" style="margin-top:20px"><i
+                                class="fa fa-save"></i>
+                            Simpan</button>
                 </form>
             </div>
         </div>
