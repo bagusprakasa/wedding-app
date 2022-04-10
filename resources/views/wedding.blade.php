@@ -331,7 +331,7 @@
                 kedua mempelai.</div>
 
             <div id="row-lightgallery" class="row gy-4 mt-10 overflow-hidden">
-                <form action="{{ route('visitor.store') }}" method="POST">
+                <form action="{{ route('simpan') }}" method="POST">
                     @csrf
                     <div class="row">
                         <div class="col-md-6">
@@ -382,7 +382,7 @@
                     Copyright Bagus Prakasa - All Rights Reserved
                 </div>
                 <div class="col-auto">
-                    galihbagus555@gmail.com
+                    {{-- galihbagus555@gmail.com --}}
                     <a href="https://www.instagram.com/galih_gorila/"><i class="fab fa-instagram"></i></a>
                     <a href="https://github.com/bagusprakasa"><i class="fab fa-github"></i></a>
                     <a href="https://wa.me/083847023897"><i class="fab fa-whatsapp"></i></a>

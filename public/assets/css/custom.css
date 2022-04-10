@@ -42,8 +42,8 @@ a{
 }
 .btn-primary:not(:disabled):not(.disabled):active {
     /* background: var(--colorPrimary); */
-    background: #F7B70B;
-    border-color: #F7B70B;
+    background: #393E46;
+    border-color: #393E46;
     /* border-color: var(--colorPrimary); */
 }
 @media (min-width: 1200px){

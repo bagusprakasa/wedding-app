@@ -29,4 +29,5 @@ Route::middleware(['auth'])->group(
     }
 );
 
+Route::post('store-pelanggan', [VisitorController::class, 'storeVisitor'])->name('simpan');
 require __DIR__ . '/auth.php';

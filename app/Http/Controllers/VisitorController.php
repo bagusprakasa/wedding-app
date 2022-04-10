@@ -119,4 +119,25 @@ class VisitorController extends Controller
     {
         //
     }
+
+    public function storeVisitor(Request $request)
+    {
+        try {
+            // ddd($request->all());
+            $visitor = new Visitor;
+            $visitor->name = $request->input('name');
+            $visitor->email = $request->input('email');
+            $visitor->phone = $request->input('phone');
+            $visitor->addres = $request->input('addres');
+            $visitor->saying = $request->input('saying');
+            $visitor->present = $request->input('present');
+            $visitor->save();
+        } catch (Exception $e) {
+            return back()->withError('Terjadi kesalahan.');
+        } catch (QueryException $e) {
+            return back()->withError('Terjadi kesalahan pada database.');
+        }
+
+        return redirect()->route('landing-page');
+    }
 }
