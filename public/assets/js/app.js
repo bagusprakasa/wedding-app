@@ -1,7 +1,9 @@
 var url = new URL(window.location.href);
 var u = url.searchParams.get("u");
+var message = "tamuku !";
 if (u!=null || u!="") {
-    document.getElementById('guest').innerHTML =  window.location.href;
+    // document.getElementById('guest').innerHTML =  window.location.href;
+    document.getElementById('guest').innerHTML =  message;
 } else {
     document.getElementById('guest').innerHTML = u;
 }

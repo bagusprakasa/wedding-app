@@ -10,7 +10,7 @@
     <link rel="icon" type="image/png" href="{{ asset('') }}img/favicon/favicon-16x16.png" sizes="16x16" />
     <link rel="icon" type="image/png" href="{{ asset('') }}img/favicon/favicon-32x32.png" sizes="16x16" />
 
-    <title>Levidio Wedding Vol 2 - Website Templates</title>
+    <title>Wedding Invitation Apps</title>
 
     <!-- CSS  -->
     <!-- Bootstrap -->
@@ -58,7 +58,7 @@
                 S.Kom.</h2>
             <img src="{{ asset('') }}img/decoration/foliage-horizontal-1.svg" alt="" class="w-75 w-md-30rem my-3">
 
-            <div class="fw-bold mt-8">Halo, <span id="guest">{{ $name }}</span></div>
+            <div class="fw-bold mt-8">Halo, <span id="guest"></span></div>
             <div>Anda diundang dalam acara pernikahan kami!</div>
 
             <div id="countdown-row" class="row justify-content-center mt-8 mb-5">
@@ -109,7 +109,10 @@
                         <a class="nav-link page-scroll" href="#section-4">Mempelai</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link page-scroll" href="#section-5">Galeri</a>
+                        <a class="nav-link page-scroll" href="#section-5">Lokasi</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link page-scroll" href="#section-6">Kirim Ucapan dan Doa</a>
                     </li>
                 </ul>
             </div>
@@ -336,7 +339,7 @@
         </div>
     </section>
 
-    <section id="section-5">
+    <section id="section-6">
         <div class="container text-dark text-center">
             <h2 class="font-type-secondary">Kirim Doa dan Ucapan</h2>
             <div class="text-lg text-spacing-default my-2">Tuliskan sesuatu ucapan berupa harapan ataupun doa untuk

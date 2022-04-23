@@ -18,7 +18,7 @@ use App\Http\Controllers\WeddingController;
 // Route::get('/', function () {
 // })->name('landing-page');
 
-Route::get('/', [WeddingController::class, 'index'])->name('index');
+Route::get('/', [WeddingController::class, 'index'])->name('landing-page');
 Route::middleware(['auth'])->group(
     function () {
         Route::get('/dashboard', function () {
