@@ -1,20 +1,20 @@
 var url = new URL(window.location.href);
 var u = url.searchParams.get("u");
-if (u==null || u=="") {
-    document.getElementById('guest').innerHTML = "Guest";
+if (u!=null || u!="") {
+    document.getElementById('guest').innerHTML =  window.location.href;
 } else {
     document.getElementById('guest').innerHTML = u;
 }
 console.log(new Date(2022, 4, 22, 11, 00));
 document.addEventListener('DOMContentLoaded', function() {
-    /* 
+    /*
     |======================================
-    | APP INIT 
+    | APP INIT
     |======================================
     */
     AOS.init();
-    
-    /* 
+
+    /*
     |======================================
     | OPENING SCRIPT
     |======================================
@@ -82,9 +82,9 @@ document.addEventListener('DOMContentLoaded', function() {
             audio.pause();
         }
     })
-   
 
-    /* 
+
+    /*
     |======================================
     | PAGE SCRIPT
     |======================================
@@ -155,5 +155,5 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         }
     })
-    
+
 });

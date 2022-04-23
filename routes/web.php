@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\VisitorController;
+use App\Http\Controllers\WeddingController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,10 +15,10 @@ use App\Http\Controllers\VisitorController;
 |
 */
 
-Route::get('/', function () {
-    return view('wedding');
-})->name('landing-page');
+// Route::get('/', function () {
+// })->name('landing-page');
 
+Route::get('/', [WeddingController::class, 'index'])->name('index');
 Route::middleware(['auth'])->group(
     function () {
         Route::get('/dashboard', function () {

@@ -43,7 +43,7 @@
                             Undangan Tidak Hadir
                         </div>
                         <div class="col-md-4 pr-0 text-center">
-                            <h1>{{ \App\Models\Visitor::where('present', '1')->count() }}</h1>
+                            <h1>{{ \App\Models\Visitor::where('present', '0')->count() }}</h1>
                         </div>
                     </div>
                     <hr>

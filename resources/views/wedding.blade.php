@@ -36,6 +36,16 @@
     <link rel="stylesheet" href="{{ asset('') }}fontawesome/css/all.css">
     <script src="{{ asset('') }}fontawesome/js/all.js"></script>
     <!-- <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script> -->
+    <style>
+        .image-story {
+            width: 50%;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 20px;
+        }
+
+    </style>
 </head>
 
 <body class="opening-show">
@@ -48,7 +58,7 @@
                 S.Kom.</h2>
             <img src="{{ asset('') }}img/decoration/foliage-horizontal-1.svg" alt="" class="w-75 w-md-30rem my-3">
 
-            <div class="fw-bold mt-8">Halo, <span id="guest"></span></div>
+            <div class="fw-bold mt-8">Halo, <span id="guest">{{ $name }}</span></div>
             <div>Anda diundang dalam acara pernikahan kami!</div>
 
             <div id="countdown-row" class="row justify-content-center mt-8 mb-5">
@@ -180,6 +190,7 @@
                     <div id="section-3-card-3" class="card" data-aos="fade-right" data-aos-duration="1000">
                         <div class="card-body">
                             <div class="text-md text-dark mb-4">Pertemuan Pertama</div>
+                            <img src="{{ asset('') }}img/puskesmas.jpeg" alt="" class="image-story">
                             <p class="text-dark-500">
                                 Pertama kali bertemu dan berkenalan untuk sebatas tau "oh ini orangnya", lalu
                                 memperpanjang harap dalam istikharah, semoga Allah yakinkan, Semoga Allah mudahkan.
@@ -221,6 +232,7 @@
                     <div id="section-3-card-6" class="card" data-aos="fade-left" data-aos-duration="1000">
                         <div class="card-body">
                             <div class="text-md text-dark mb-4">Akad Nikah</div>
+                            <img src="{{ asset('') }}img/akad.jpeg" alt="" class="image-story">
                             <p class="text-dark-500">
                                 Pertemuan ke empat, akad nikah Insya Allah semakin Allah kuatkan. Karena pintu rumah
                                 sudah terketuk maka kita bersiap membuka pintu hati.
